@@ -25,44 +25,44 @@ http or https://you-fogserver-ip/fog``` to enter to the service
 ## create image template
 To start we need to create a image template 
 ![fog image template](images/fogcreateimage.png)
-after selecting create image you really only need to fill 2 categories. The <strong> Image Name</strong> and <strong> Operating system </strong>
+<br>after selecting create image you really only need to fill 2 categories. The <strong> Image Name</strong> and <strong> Operating system </strong>
 
 ## machine registration 
 this part might be a little tricky. Before registration a machine make sure the fog DHCP is working. To start we need to get in the bios of machine1. While in the Bios we will change the bootorder.<br><br>
 ![fog bios machine1](images/bootordertocaptureimage.png)
-usualy ubuntu will be on top but to be able to register and capture a image it need to be below efi network  and cdrom Drive.
+<br>usualy ubuntu will be on top but to be able to register and capture a image it need to be below efi network  and cdrom Drive.
 
 after that just restart your machine and you should see something like this<br><br>![fog bios machine1](images/newmachine1.12.png)
-Just select Quick Registration and Inventory to start the process.<br> When the process is done if you go in your Fog host management seciton and you should see this<br><br>
+<br>Just select Quick Registration and Inventory to start the process.<br> When the process is done if you go in your Fog host management seciton and you should see this<br><br>
 
 ![fog bios machine1](images/fogcreatetask1.png)
 
 ## host assignment
 Now we need to assign the host to the image we created a couple minutes ago. select the image and you should see this<br><br>![fog bios machine1](images/foghostimage.png)
-In this section you just have to go in the Host image category and select the image
+<br>In this section you just have to go in the Host image category and select the image
 
 ## task creation
 The last step before capturing image is to create a task to capture the image.<br><br>
 ![alt text](images/fogcreatetask1.1.png)
 The orange task is to capture an image.<br>After this go in the task tab. <br><br> ![alt text](images/forcreatetask2.png)
-On top of the blue arrow there will be another design just select it to force task to run immediately.
+<br>On top of the blue arrow there will be another design just select it to force task to run immediately.
 
 ## image capture
 Just restart machine1 to start the process. after a couple of minutes you will see this<br><br>![alt text](images/fogcapturevm.png)
-As you can see its capturing my VM which has a size of 15GB. after its done the image in fog should show it has a size.<br><br>![alt text](images/imagecaptured.png)
+<br>As you can see its capturing my VM which has a size of 15GB. after its done the image in fog should show it has a size.<br><br>![alt text](images/imagecaptured.png)
 
 ## Deploying Images
 In this part we will create the new vm to deploy the image
 
 first create a Virtual machine without a iso image<br><br>
 ![alt text](images/newmachine1.png)
-after starting the machine you should see the basic fog screen again but this time we will select Deploy image
+<br>after starting the machine you should see the basic fog screen again but this time we will select Deploy image
 ![alt text](images/newmachine1.12.png)
 <br><br>
 ![alt text](images/newmachine1.13.png)
-enter the admin username and password of fog<br><br>
+<br>enter the admin username and password of fog<br><br>
 ![alt text](images/newmachine1.14.png)
-If there was multiple images i would select the one i want but after this the deploying process should start.<br><br>
+<br>If there was multiple images i would select the one i want but after this the deploying process should start.<br><br>
 ![alt text](images/newmachinedeployingimage.png)
 
 ## End
@@ -71,7 +71,8 @@ Now the exact same operating system will be installed but with different mac add
 But let me show you proof of it working
 
 ![alt text](images/newmachineinstalled1.png)
+<br><br>
 ![alt text](images/final1.png)
-Machine1 <br><br>
+<br>Machine1 <br><br>
 ![alt text](images/final2.png)
 Cloned machine.
